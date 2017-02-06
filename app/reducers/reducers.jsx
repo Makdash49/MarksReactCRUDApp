@@ -1,25 +1,3 @@
-// var uuid = require('node-uuid');
-// var moment = require('moment');
-
-// export var ItemsReducer = (state = '', action) => {
-//   switch (action.type) {
-//     case 'SET_SEARCH_TEXT':
-//       return action.searchText;
-//     default:
-//       return state;
-//   };
-// };
-//
-//
-// export var showCompletedReducer = (state = false, action) => {
-//   switch (action.type) {
-//     case 'TOGGLE_SHOW_COMPLETED':
-//       return !state;
-//     default:
-//       return state;
-//   };
-// };
-//
 export var itemsReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -49,27 +27,3 @@ export var itemsReducer = (state = [], action) => {
       return state;
   };
 };
-//
-// export var authReducer = (state = {}, action) => {
-//   switch (action.type) {
-//     case 'LOGIN':
-//      return {
-//        uid: action.uid
-//      };
-//     case 'LOGOUT':
-//       return {};
-//     default:
-//       return state;
-//   };
-// };
-//
-
-// When log out, wipes auth object.
-// Todos array, is still in redux store.
-// Handler for logout wipes all data.
-// Update reducer on logout to wipe data.
-// Make new test.  Start with data.
-// Trigger log out action.  Verify it got wiped out.
-// All in reducers.
-//
-// Add handler log todos reducer.  Return empty array.

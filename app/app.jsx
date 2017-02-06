@@ -4,7 +4,7 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 var {Provider} = require('react-redux');
 var store = require('configureStore').configure();
-// import router from 'app/router/';
+import router from 'app/router/';
 
 
 // Load foundations
