@@ -13,7 +13,7 @@ export class AddItem extends React.Component {
 
     if (itemText.length > 0) {
       this.refs.itemText.value = '';
-      dispatch(actions.startAddItem(itemText));
+      dispatch(actions.addItem(itemText));
     } else {
       this.refs.itemText.focus();
     }

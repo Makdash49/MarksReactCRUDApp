@@ -1,24 +1,24 @@
-import moment from 'moment';
-var uuid = require('node-uuid');
+// import moment from 'moment';
+// var uuid = require('node-uuid');
 
 
-export var addItem = (item) => {
+export var addItem = (text) => {
   return {
     type: 'ADD_ITEM',
-    item
+    text
   };
 };
 
-export var startAddItem = (text) => {
-  return (dispatch, getState) => {
-    var item = {
-      id: uuid(),
-      text,
-      createdAt: moment().unix(),
-    };
-    dispatch(addItem(item));
-  }
-}
+// export var startAddItem = (text) => {
+//   return (dispatch, getState) => {
+//     var item = {
+//       id: uuid(),
+//       text,
+//       createdAt: moment().unix(),
+//     };
+//     dispatch(addItem(item));
+//   }
+// }
 
 
 

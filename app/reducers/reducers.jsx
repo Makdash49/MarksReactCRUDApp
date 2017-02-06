@@ -1,9 +1,17 @@
+var uuid = require('node-uuid');
+import moment from 'moment';
+
 export var itemsReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_ITEM':
+    var item = {
+      createdAt: moment().unix(),
+      id: uuid(),
+      text: action.text,
+    }
       return [
         ...state,
-        action.item
+        item
       ];
     // case 'UPDATE_TODO':
     //   return state.map((todo) => {
