@@ -24,7 +24,7 @@ export class itemList extends React.Component {
 
     return (
       <div>
-        itemList!!!!
+        itemList!!!!!
       </div>
     )
   }
