@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import Todo from 'Todo';
+import Item from 'Item';
 
 export class ItemList extends React.Component {
   render () {
@@ -8,6 +8,11 @@ export class ItemList extends React.Component {
     console.log('ITEMS:', items);
 
     var renderItems = () => {
+      return items.map((item) => {
+        return (
+          <Item key={item.createdAt} {...item}/>
+        );
+      });
 
     };
 
