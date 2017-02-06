@@ -1,4 +1,6 @@
 import moment from 'moment';
+var uuid = require('node-uuid');
+
 
 export var addItem = (item) => {
   return {
@@ -10,6 +12,7 @@ export var addItem = (item) => {
 export var startAddItem = (text) => {
   return (dispatch, getState) => {
     var item = {
+      id: uuid(),
       text,
       createdAt: moment().unix(),
     };

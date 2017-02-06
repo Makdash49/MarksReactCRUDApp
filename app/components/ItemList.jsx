@@ -10,7 +10,7 @@ export class ItemList extends React.Component {
     var renderItems = () => {
       return items.map((item) => {
         return (
-          <Item key={item.createdAt} {...item}/>
+          <Item key={item.id} {...item}/>
         );
       });
 
