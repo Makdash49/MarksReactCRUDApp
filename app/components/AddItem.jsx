@@ -9,13 +9,13 @@ export class AddItem extends React.Component {
     e.preventDefault();
     var {dispatch} = this.props
 
-    var todoText = this.refs.todoText.value;
+    var itemText = this.refs.itemText.value;
 
-    if (todoText.length > 0) {
-      this.refs.todoText.value = '';
-      dispatch(actions.startAddTodo(todoText));
+    if (itemText.length > 0) {
+      this.refs.itemText.value = '';
+      dispatch(actions.startAddItem(itemText));
     } else {
-      this.refs.todoText.focus();
+      this.refs.itemText.focus();
     }
   }
 
@@ -23,7 +23,7 @@ export class AddItem extends React.Component {
     return (
       <div className="container__footer">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" ref="todoText" placeholder="Add an item."/>
+          <input type="text" ref="itemText" placeholder="Add an item."/>
           <button className="button expanded">Add Item</button>
         </form>
       </div>
