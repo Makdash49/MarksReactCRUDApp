@@ -19,3 +19,11 @@ export var toggleEditable = (id) => {
     id
   }
 }
+
+export var editText = (id, itemText) => {
+  return {
+    type: 'EDIT_TEXT',
+    id,
+    itemText
+  }
+}

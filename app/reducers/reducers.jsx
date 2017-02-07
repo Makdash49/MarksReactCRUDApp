@@ -32,6 +32,17 @@ export var itemsReducer = (state = [], action) => {
           return item;
         }
       });
+    case 'EDIT_TEXT':
+      return state.map((item) => {
+        if (item.id === action.id) {
+          return {
+            ...item,
+            text: action.itemText
+          };
+        } else {
+          return item;
+        }
+      })
     default:
       return state;
   };
