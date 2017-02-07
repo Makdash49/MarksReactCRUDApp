@@ -2,3 +2,12 @@
   border: 1px solid $light-grey-border;
   padding-left: 3%;
 }
+
+.my-red-button {
+  @include button;
+  background-color: red;
+  width: 30%;
+  &:hover {
+    background: black;
+  }
+ }

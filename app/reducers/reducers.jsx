@@ -13,6 +13,13 @@ export var itemsReducer = (state = [], action) => {
         ...state,
         item
       ];
+    case 'DELETE_ITEM':
+      for (var i = 0; i < state.length; i++) {
+        if (state[i].id === action.id) {
+          state.splice(i, 1);
+        };
+      };
+      return [...state];
     // case 'UPDATE_TODO':
     //   return state.map((todo) => {
     //     if (todo.id === action.id) {

@@ -5,11 +5,11 @@ import * as actions from 'actions';
 
 export class Item extends React.Component {
 
-  // handleDelete (e) {
-  //   e.preventDefault();
-  //   var {dispatch, id} = this.props;
-  //   dispatch(actions.startDeleteTodo(id));
-  // }
+  handleDelete (e) {
+    e.preventDefault();
+    var {dispatch, id} = this.props;
+    dispatch(actions.deleteItem(id));
+  }
 
   render() {
     var {text, createdAt} = this.props;
@@ -18,6 +18,7 @@ export class Item extends React.Component {
       <div>
         <div className="item">
           <p>{text}</p>
+          <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
         </div>
       </div>
     )
@@ -25,7 +26,3 @@ export class Item extends React.Component {
 };
 
 export default connect()(Item)
-
-
-
-// <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>

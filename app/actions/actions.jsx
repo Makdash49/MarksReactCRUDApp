@@ -4,3 +4,10 @@ export var addItem = (text) => {
     text
   };
 };
+
+export var deleteItem = (id) => {
+  return {
+    type: 'DELETE_ITEM',
+    id
+  }
+}
