@@ -11,6 +11,13 @@ export class Item extends React.Component {
     dispatch(actions.deleteItem(id));
   }
 
+  handleEdit (e) {
+  e.preventDefault();
+  var {dispatch, id} = this.props;
+  // edit = !edit
+  dispatch(actions.toggleEditable(id));
+}
+
   render() {
     var {text, createdAt} = this.props;
 
@@ -19,6 +26,7 @@ export class Item extends React.Component {
         <div className="item">
           <p>{text}</p>
           <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
+          <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
         </div>
       </div>
     )

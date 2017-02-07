@@ -11,3 +11,12 @@
     background: black;
   }
  }
+
+ .my-green-button {
+  @include button;
+  background-color: green;
+  width: 30%;
+  &:hover {
+    background: black;
+  }
+}

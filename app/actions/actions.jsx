@@ -11,3 +11,11 @@ export var deleteItem = (id) => {
     id
   }
 }
+
+
+export var toggleEditable = (id) => {
+  return {
+    type: 'TOGGLE_EDITABLE',
+    id
+  }
+}

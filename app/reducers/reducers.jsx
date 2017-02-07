@@ -6,6 +6,7 @@ export var itemsReducer = (state = [], action) => {
     case 'ADD_ITEM':
     var item = {
       createdAt: moment().unix(),
+      editable: false,
       id: uuid(),
       text: action.text,
     }
@@ -20,17 +21,17 @@ export var itemsReducer = (state = [], action) => {
         };
       };
       return [...state];
-    // case 'UPDATE_TODO':
-    //   return state.map((todo) => {
-    //     if (todo.id === action.id) {
-    //       return {
-    //         ...todo,
-    //         ...action.updates
-    //       };
-    //     } else {
-    //       return todo;
-    //     }
-    //   });
+    case 'TOGGLE_EDITABLE':
+      return state.map((item) => {
+        if (item.id === action.id) {
+          return {
+            ...item,
+            editable: !item.editable
+          };
+        } else {
+          return item;
+        }
+      });
     default:
       return state;
   };
