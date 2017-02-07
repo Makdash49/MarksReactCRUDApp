@@ -8,10 +8,16 @@ export var configure = (initialState = {}) => {
     items: itemsReducer,
   });
 
+
   var store = redux.createStore(reducer, initialState, redux.compose(
-    redux.applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtension(): f => f
-  ));
+  window.devToolsExtension ? window.devToolsExtension(): f => f
+));
 
   return store;
 };
+
+// USE THIS CODE INSTEAD WHEN ADDING THUNK MIDDLEWARE
+// var store = redux.createStore(reducer, initialState, redux.compose(
+//   redux.applyMiddleware(thunk),
+//   window.devToolsExtension ? window.devToolsExtension(): f => f
+// ));

@@ -13,7 +13,6 @@ export class ItemList extends React.Component {
           <Item key={item.id} {...item}/>
         );
       });
-
     };
 
     return (

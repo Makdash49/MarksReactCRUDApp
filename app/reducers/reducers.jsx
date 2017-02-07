@@ -24,13 +24,6 @@ export var itemsReducer = (state = [], action) => {
     //       return todo;
     //     }
     //   });
-    // case 'ADD_TODOS':
-    //   return [
-    //     ...state,
-    //     ...action.todos
-    //   ];
-    // case 'LOGOUT':
-    //   return [];
     default:
       return state;
   };

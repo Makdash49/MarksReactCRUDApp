@@ -8,9 +8,12 @@ export class ListApp extends React.Component {
 
     return (
       <div>
-        ListApp!
-        <AddItem/>
-        <ItemList/>
+        <div className="column small-centered small-11 medium-6 large-5">
+          <div className="container">
+            <AddItem/>
+            <ItemList/>
+          </div>
+        </div>
       </div>
     )
   }

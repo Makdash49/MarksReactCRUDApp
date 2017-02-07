@@ -4,16 +4,28 @@ import moment from 'moment';
 import * as actions from 'actions';
 
 export class Item extends React.Component {
+
+  // handleDelete (e) {
+  //   e.preventDefault();
+  //   var {dispatch, id} = this.props;
+  //   dispatch(actions.startDeleteTodo(id));
+  // }
+
   render() {
     var {text, createdAt} = this.props;
-    
+
     return (
       <div>
-        <p>{text}</p>
-        <p>{createdAt}</p>
+        <div className="item">
+          <p>{text}</p>
+        </div>
       </div>
     )
   }
 };
 
 export default connect()(Item)
+
+
+
+// <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
