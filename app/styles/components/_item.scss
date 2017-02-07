@@ -1,6 +1,15 @@
 .item {
   border: 1px solid $light-grey-border;
   padding-left: 3%;
+  padding-top: 3%;
+  float: left;
+  width: 100%;
+  display: flex;
+  padding-bottom: 0%;
+}
+
+.content {
+  width: 68%
 }
 
 .my-red-button {
@@ -19,4 +28,13 @@
   &:hover {
     background: black;
   }
+}
+
+.deleteBox {
+  // border: 5px solid red;
+  margin-bottom: 0%;
+  float: right;
+  padding: 1px;
+  float: right;
+  width: 30%;
 }

@@ -17,7 +17,7 @@ export class Item extends React.Component {
     dispatch(actions.toggleEditable(id));
   }
 
-  handleSubmit (e) {
+  handleUpdateSubmit (e) {
     e.preventDefault();
     var {dispatch, id} = this.props
 
@@ -39,20 +39,30 @@ export class Item extends React.Component {
         return (
           <div className="item">
 
-            <form onSubmit={this.handleSubmit.bind(this)}>
-              <input type="text" ref="itemText" defaultValue={text}/>
-            </form>
+            <div className="content">
+              <form onSubmit={this.handleUpdateSubmit.bind(this)}>
+                <input type="text" ref="itemText" defaultValue={text}/>
+              </form>
+            </div>
 
-            <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
-            <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
+            <div className="deleteBox">
+              <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
+              <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
+            </div>
+
           </div>
         )
       } else {
         return (
             <div className="item">
-              <p>{text}</p>
-              <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
-              <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
+              <div className="content">
+                <p>{text}</p>
+              </div>
+
+              <div className="deleteBox">
+                <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
+                <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
+              </div>
             </div>
         )
       }
